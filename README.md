@@ -16,14 +16,14 @@ Using Protvec sequence embeddings [1] for evaluating bacterial protein sequence 
 
 ### K-mer frequency Embedding 
 
-Sequences are embedded as vectors based on the frequeny of _3_-mers using #TODO 
+Sequences are embedded as vectors based on the frequeny of _3_-mers using the scipt `kmer_frequency_embed.py`. 
 
 ### Protvec Embedding 
 
-A set of 25,000 _Bacillus_ carbohydrate metabolism sequences are embedded using the _Bacillus_ Protvec model, the Swissprot Protvec and k-mer frequency. 
+A set of 25,000 _Bacillus_ carbohydrate metabolism sequences are embedded using the _Bacillus_ Protvec model and the Swissprot Protvec model using `embed_seqs.py`. 
 
 ### Visualisation 
-Sequence embeddings are visualised using PCA in the notebook `vis_embeddings.ipynb`. 
+Sequence embeddings are visualised using PCA in the notebook `vis_embeddings.ipynb`. #TODO 
 
 
 ## Cluster Prediction 
