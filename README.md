@@ -1,6 +1,21 @@
 # ProtvecBacterialAnnotations
 
-Code for Australian Mathematical Sciences Institute Vacation Research Scholarship Project 'Hierarchical Classification of Protein Sequences' 
+Using Protvec sequence embeddings for evaluating Bacterial Protein sequence annotations. 
+
+
+## Protvec Model Training 
+
+
+## Protvec Embedding 
+
+## K-mer frequency embedding 
+
+## Cluster Prediction 
+The number of clusters present within the embeddings is estimated using the Calinski-Harabasz index. R script 
+
+## Comapring Protvec Clustering with Subsystems 
+
+## Unknown Protein Sequences 
 
 
 Swissprot Protvec model:
