@@ -2,7 +2,7 @@
 
 Using Protvec sequence embeddings [1] for evaluating bacterial protein sequence annotations. 
 
-### Protvec Models 
+## Protvec Models 
 
 - Protvec models are trained using code adapted from biovec https://github.com/kyu999/biovec using the Protvec algorithm [1] with a vector size of 100 and a context size of 25. We provide the training script `train_protvec.py`. 
 
@@ -36,7 +36,7 @@ The predicted number of clusters is visualised in the notebook #TODO
 
 The clusters of sequences which arise from the Protvec sequence embedding are compared with their subsystems annotations by building a tanglegram using the R  dendextend package [2] as shown in the notebook #TODO 
 
-### Unknown Protein Sequences 
+## Unknown Protein Sequences 
 
 We trained a Protvec model with _Bacillus_ sequences with unknown function to embed and cluster _Bacillus_ sequences with unknown function. Clusters were formed using k-means and visualised using _t_-SNE. 
 
