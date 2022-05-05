@@ -1,4 +1,4 @@
-# ProtvecHierachy
+# ProtvecBacterialAnnotations
 
 Code for Australian Mathematical Sciences Institute Vacation Research Scholarship Project 'Hierarchical Classification of Protein Sequences' 
 
