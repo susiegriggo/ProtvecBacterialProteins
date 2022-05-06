@@ -38,7 +38,7 @@ The clusters of sequences which arise from the Protvec sequence embedding are co
 
 ## Unknown Protein Sequences 
 
-We trained a Protvec model with _Bacillus_ sequences with unknown function to embed and cluster _Bacillus_ sequences with unknown function. Clusters were formed using k-means and visualised using _t_-SNE. #TODO
+We trained a Protvec model with _Bacillus_ sequences with unknown function to embed and cluster _Bacillus_ sequences with unknown function. Clusters were formed using k-means and visualised using _t_-SNE `cluster_unknowns.ipynb`
 
 
 ## Citing this work 
