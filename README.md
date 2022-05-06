@@ -29,12 +29,12 @@ Sequence embeddings are visualised using PCA in the notebook `vis_embeddings.ipy
 ## Cluster Prediction 
 The number of clusters present within the embeddings is estimated using the Calinski-Harabasz index. The procedure for identifying clusters is included in the R script `get_CHcriterion.R` 
 
-The predicted number of clusters is visualised in the notebook #TODO 
+The predicted number of clusters is visualised in the notebook `num_clusters.ipynb`  
 
 
 ### Comapring Protvec Clustering with Subsystems 
 
-The clusters of sequences which arise from the Protvec sequence embedding are compared with their subsystems annotations by building a tanglegram using the R  dendextend package [2] as shown in the notebook #TODO 
+The clusters of sequences which arise from the Protvec sequence embedding are compared with their subsystems annotations by building a tanglegram using the R  dendextend package [2] as shown in the notebook `tanglegram.ipynb` 
 
 ## Unknown Protein Sequences 
 
@@ -43,7 +43,7 @@ We trained a Protvec model with _Bacillus_ sequences with unknown function to em
 
 ## Citing this work 
 Please cite this work if you use it!
-#TODO add citation
+#TODO add citation - do I need a zendodo link or something 
 
 ## References 
 
