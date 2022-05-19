@@ -5,10 +5,15 @@ Here we demonstrate the use of Protvec sequence embeddings for evaluating bacter
 ## Protvec Models 
 
 - Protvec models are trained using code adapted from [biovec](https://github.com/kyu999/biovec) using the Protvec algorithm [1] with a vector size of 100 and a context size of 25. We provide the training script `train_protvec.py`. 
+-  Requires python [gensim](https://pypi.org/project/gensim/) 
+-  Sequences are provided. Must be unzipped before use - TODO provide instructions 
+  `cd data` 
+  `gunzip -r` 
 
 - The Protvec model trained on _Bacillus_ carbohydrate metabolism seqeuences was compared with BLOSUM62 matrix. This analysis is shown in notebooks, `BLOSUM_comparison.ipynb`
 
 - Protvec models trained with [Bacillus carbohydrate metabolism sequences](https://doi.org/10.25451/flinders.19770379) and [unknown Bacillus sequences](https://doi.org/10.25451/flinders.19770742) can be downloaded. 
+
 
 - Sequences are embedded using a [Protvec model trained with 324,018 sequences from the Swiss-Prot database](http://dx.doi.org/10.7910/DVN/JMFHTN). 
 
