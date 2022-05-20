@@ -1,4 +1,8 @@
-""""Train Protvec model using Word2vec. Takes a training set of sequences and returns a pickled dictionary of vectors for each possible 3-mer in the training set""" 
+""""
+Train Protvec model using Word2vec algorithm. 
+Takes a filtered training set of sequences and returns a pickled dictionary of vectors for each possible 3-mer in the training set.
+Code modified from biovec https://github.com/kyu999/biovec
+""" 
 
 #imports
 from Bio import SeqIO
@@ -100,9 +104,9 @@ k = 3 #kmer length
 dim = 100 #number of dimensions 
 min_count = 1
 print('reading in files')
-c_fname ="../sequences/bacillus_trainingset.fa"  #fasta file of sequences used to train the mode
-dict_fname ='unknowns/bacillus_protvec.pkl'  #3mer dictionary name 
-kmer_corpus ="unknowns/bacillus_protvec_corps.txt" #output kmer corpus 
+c_fname ="../data/bacillus_carbohydratemetabolism_trainingset.fa"  #fasta file of sequences used to train the model
+dict_fname ='bacillus_carbohydratemetabolism_3mervectors.pkl'  #3mer dictionary name 
+kmer_corpus ="bacillus_carbohydratemetabolism_corps.txt" #output kmer corpus 
 print('files read!') 
 
 pv = ProtVec(k, dim, min_count, corpus_fname=c_fname, 

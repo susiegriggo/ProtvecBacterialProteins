@@ -1,4 +1,7 @@
-"""Code to embed a set of sequences in an embedding space using a trained protvec model and an embedding set of sequences. Creates a .csv file of the embedded sequences. Also returns file of sequences which could not be successfully embedded""" 
+"""
+Embed a set of sequences in an embedding space using a trained protvec model and an embedding set of sequences. 
+Creates a .csv file of the embedded sequences. Also returns file of sequences which could not be successfully embedded
+""" 
 
 import pickle 
 import numpy as np
@@ -124,11 +127,11 @@ def embed_sequences(sequences,vec_dict, d):
 	return standard_embedding, embedded_seqs_keys, bad_seqs
 
 #import the pickled vector dictionary 
-with open('../protvec_models/bacillus_3mervectors.pkl', 'rb') as f: 
+with open('bacillus_carbohydratemetabolism_3mervectors.pkl', 'rb') as f: 
 	vec_dict = pickle.load(f) 
 
 #load in real sequences to embed (see what the speed is like when I run it locally)
-seqs = SeqIO.index("../sequences/bacillus_embeddingset.fa", 'fasta')
+seqs = SeqIO.index("../data/bacillus_carbohydratemetabolism_embeddingset.fa", 'fasta')
 
 #embed the sequences  
 print('EMBEDDING SEQUENCES')
@@ -141,8 +144,8 @@ embedding_df.index = seqs_keys
 
 #save the embedding and missing 3mers so we can evaluate them locally 
 print('Saving the embedding') 
-embedding_df.to_csv('../embedded_sequences/bacillus_filtered_embedded.csv', sep = '\t')
-(pd.DataFrame(missing)).to_csv('../embedded_sequences/bacillus_filtered_notembedded.csv', sep = '\t')
+embedding_df.to_csv('bacillus_carbohydratemetabolism_embedded.tsv', sep = '\t')
+(pd.DataFrame(missing)).to_csv('../embedded_sequences/bacillus_carbohydratemetabolism_notembedded.tsv', sep = '\t')
 print('Embedding saved!') 
 
 

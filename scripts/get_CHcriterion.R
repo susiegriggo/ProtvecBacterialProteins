@@ -1,6 +1,10 @@
-##### Script to generate the Calinski Harabasz Index and sum of squaare errors
-##### Completed with 500 bootstraps 
-#### Works with just a subsample of 5000 sequences
+"""
+Script to generate the Calinski Harabasz Index and sum of squaare errors
+Completed with 500 bootstraps 
+Works on a  subsample of 5000 sequences
+
+Written in R to use R cluster library functions hclust, agnes and diana
+""" 
 
 #imports 
 library(dplyr)
@@ -98,7 +102,7 @@ CHCriterion <- function( data, kmax, clustermethod, metric, ...  )
 
 
 #read in bacillus data embedded with bacillus model
-bacil_embedding <- read.delim(file = '../embedded_sequences/bacillus_filtered_embedded.csv', sep = '\t')
+bacil_embedding <- read.delim(file = 'bacillus_carbohydratemetabolism_embedded.tsv', sep = '\t')
 #set the sequence md5s as the index
 rownames(bacil_embedding) <- bacil_embedding$X
 bacil_embedding$X <- NULL

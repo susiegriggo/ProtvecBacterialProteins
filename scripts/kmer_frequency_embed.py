@@ -89,7 +89,7 @@ def embedkmers_seqs(seqs, embedding):
     return embed_kmerfreq 
     
 #import the embedding sequences 
-embed_seqs_dict = SeqIO.index("bacillus_embeddingset.fa", 'fasta')
+embed_seqs_dict = SeqIO.index("bacillus_carbohydratemetabolism_embeddingset.fa", 'fasta')
 embed_seqs_keys = list(embed_seqs_dict.keys()) #gives md5 hashes of the sequences 
 embed_seqs = [str(embed_seqs_dict.get(key).seq) for key in embed_seqs_keys]
 
@@ -102,12 +102,6 @@ embed_seqs_containsX = ['X' not in seqs for seqs in embed_seqs]
 keys_containsX = [embed_seqs_keys[i] for i in range(len(embed_seqs_keys)) if embed_seqs_containsX[i] == True]
 embed_seqs = [str(embed_seqs_dict.get(key).seq) for key in keys_containsX]
 embed_seqs_keys = keys_containsX 
-
-#remove sequences which contain more than 1024 amino acids 
-embed_seqs_1024 = [len(seqs)<= 1024 for seqs in embed_seqs]
-keys_1024 = [embed_seqs_keys[i] for i in range(len(embed_seqs)) if embed_seqs_1024[i] == True]
-embed_seqs = [str(embed_seqs_dict.get(key).seq) for key in keys_1024]
-embed_seqs_keys = keys_1024
 
 #generate a list of all possible kmeres for the murphy10 alphabet 
 murphy10_sub = Alphabet.Reduced.murphy_10_tab 
@@ -130,4 +124,4 @@ embed_kmerfreq = embedkmers_seqs(embed_seqs_murphy10, kmerfreq_df)
 #save the embedding 
 embed_kmerfreqDf = pd.DataFrame(embed_kmerfreq, index = embed_seqs_keys)
 embed_kmerfreqDf.columns = kmers
-embed_kmerfreqDf.to_csv('kmer_frequency_bacillus.csv')
+embed_kmerfreqDf.to_csv('bacillus_carbohydratemetabolism_kmer_frequency.csv')
