@@ -5,8 +5,10 @@ Here we demonstrate the use of Protvec sequence embeddings for evaluating bacter
 ## Usage 
 - Training Protvec models requires the python [gensim](https://pypi.org/project/gensim/) module 
 - Clone the repository and unzip the sequences 
-`git clone https://github.com/susiegriggo/ProtvecBacterialProteins.git`
-`gunzip data/* ` 
+```
+git clone https://github.com/susiegriggo/ProtvecBacterialProteins.git
+gunzip data/*  
+```
 
 ## Protvec Models 
 
