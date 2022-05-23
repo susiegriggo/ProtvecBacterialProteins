@@ -2,6 +2,9 @@
 
 Here we demonstrate the use of Protvec sequence embeddings for evaluating bacterial protein annotations. 
 
+This repository contains the code to train and embed sequences using Protvec models with _Bacillus_ carbohydrate metabolism sequences and unannotated _Bacillus_ sequences. We also supply code to analyse the resulting models and embeddings.  
+
+
 ## Usage 
 - Training Protvec models requires the python [gensim](https://pypi.org/project/gensim/) module 
 - Clone the repository and unzip the sequences 
@@ -17,6 +20,8 @@ gunzip data/*
 - Alternatively trained Protvec models can be downloaded: 
   - Protvec model trained with [_Bacillus_ carbohydrate metabolism sequences](https://doi.org/10.25451/flinders.19770379)  
   - Protvec model trained with [unannotated _Bacillus_ sequences](https://doi.org/10.25451/flinders.19770742)  
+
+- Training and embedding sequenes for the _Bacillus_ carbohydrate metabolism model are contained in this repository. Sequences to train the unknkown Protvec model can be downloaded [here](https://cloudstor.aarnet.edu.au/plus/remote.php/webdav/bacillus_unknown_trainingset.fa.gz). 
 
 ### Protvec Sequence Embedding 
 - Sequences are embedded using the provided `embed_seqs.py` script.
