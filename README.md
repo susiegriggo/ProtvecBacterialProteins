@@ -25,7 +25,7 @@ gunzip data/*
 
 ### Protvec Sequence Embedding 
 - Sequences are embedded using the provided `embed_seqs.py` script.
-- In this study sequences were embedded using the _Bacillus_ carbohydrate metabolism Protvec model as a [Protvec model trained with 324,018 sequences from the Swiss-Prot database](http://dx.doi.org/10.7910/DVN/JMFHTN).
+- In this study sequences were embedded using the _Bacillus_ carbohydrate metabolism Protvec model as a [Protvec model trained with 324,018 sequences from the Swiss-Prot database](http://dx.doi.org/10.7910/DVN/JMFHTN) [1]. 
 
 ### K-mer frequency Embedding 
 - Sequences were also embedded as vectors based on the frequeny of each 3-mer using the scipt `kmer_frequency_embed.py`. 
@@ -45,9 +45,6 @@ gunzip data/*
 
 - We trained a Protvec model with _Bacillus_ sequences with unknown function to embed and cluster _Bacillus_ sequences with unknown function. Clusters were formed using k-means and visualised using _t_-SNE `cluster_unknowns.ipynb`
 
-
-## Citing this work 
-Please cite this work if you use it! The preprint is available in bioRxiv #TODO 
 
 ## References 
 
