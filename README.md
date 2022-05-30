@@ -14,6 +14,7 @@ Clone the repository and add sequences and data to the data directory.
 git clone https://github.com/susiegriggo/ProtvecBacterialProteins.git
 cd ProtvecBacterialProteins/data 
 wget https://cloudstor.aarnet.edu.au/plus/s/wxRIVLKBejzAutc/download
+unzip download 
 gunzip Annotating_Bacterial_Function_Space/*
 mv Annotating_Bacterial_Function_Space/* ./
 ```
