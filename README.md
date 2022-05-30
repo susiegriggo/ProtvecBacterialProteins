@@ -4,16 +4,18 @@ Here we demonstrate the use of Protvec sequence embeddings for evaluating bacter
 
 This repository contains the code to train and embed sequences using Protvec models with _Bacillus_ carbohydrate metabolism sequences and unannotated _Bacillus_ sequences. We also supply code to analyse the resulting models and embeddings.  
 
-All training sequences, embedding sequences, and annotations can be downloaded [here](#TODO). 
+All training sequences, embedding sequences, and annotations can be downloaded [here](https://cloudstor.aarnet.edu.au/plus/s/wxRIVLKBejzAutc/download). 
 
 ## Usage 
 
-Clone this repository. Add sequences and annotations to the data directory and unzip. 
+Clone the repository and add sequences and data to the data directory. 
+
 ```
 git clone https://github.com/susiegriggo/ProtvecBacterialProteins.git
-cd data 
-wget addthis 
-gunzip *  
+cd ProtvecBacterialProteins/data 
+wget https://cloudstor.aarnet.edu.au/plus/s/wxRIVLKBejzAutc/download
+gunzip Annotating_Bacterial_Function_Space/*
+mv Annotating_Bacterial_Function_Space/* ./
 ```
 
 ## Protvec Models 
