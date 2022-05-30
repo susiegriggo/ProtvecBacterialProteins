@@ -17,7 +17,7 @@ gunzip *
 ```
 
 ## Protvec Models 
-- Training Protvec models requires the[gensim](https://pypi.org/project/gensim/) module 
+- Training Protvec models requires the [gensim](https://pypi.org/project/gensim/) module 
 - Protvec models are trained (using code adapted from [biovec](https://github.com/kyu999/biovec)) with the Protvec algorithm [1]. A vector size of 100 and a context size of 25 is used. We provide the training script `train_protvec.py`. 
 - The Protvec model trained on _Bacillus_ carbohydrate metabolism seqeuences was compared with BLOSUM62 matrix. This analysis is shown in the notebook, `BLOSUM_comparison.ipynb`
 - Alternatively, pre-trained Protvec models can be downloaded: 
