@@ -1,5 +1,5 @@
 """
-Script to generate the Calinski Harabasz Index and sum of squaare errors
+Script to generate the Calinski Harabasz Index and sum of square errors
 Completed with 500 bootstraps 
 Works on a  subsample of 5000 sequences
 
