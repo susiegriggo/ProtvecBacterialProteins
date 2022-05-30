@@ -4,21 +4,23 @@ Here we demonstrate the use of Protvec sequence embeddings for evaluating bacter
 
 This repository contains the code to train and embed sequences using Protvec models with _Bacillus_ carbohydrate metabolism sequences and unannotated _Bacillus_ sequences. We also supply code to analyse the resulting models and embeddings.  
 
-Training and embedding sequenes for the _Bacillus_ carbohydrate metabolism model are contained in this repository. Sequences to train the unknkown Protvec model can be downloaded [here](https://cloudstor.aarnet.edu.au/plus/remote.php/webdav/bacillus_unknown_trainingset.fa.gz). 
+All training sequences, embedding sequences, and annotations can be downloaded [here](#TODO). 
 
 ## Usage 
-- Training Protvec models requires the python [gensim](https://pypi.org/project/gensim/) module 
-- Clone the repository and unzip the sequences 
+
+Clone this repository. Add sequences and annotations to the data directory and unzip. 
 ```
 git clone https://github.com/susiegriggo/ProtvecBacterialProteins.git
-gunzip data/*  
+cd data 
+wget addthis 
+gunzip *  
 ```
 
 ## Protvec Models 
-
+- Training Protvec models requires the [gensim](https://pypi.org/project/gensim/) module 
 - Protvec models are trained (using code adapted from [biovec](https://github.com/kyu999/biovec)) with the Protvec algorithm [1]. A vector size of 100 and a context size of 25 is used. We provide the training script `train_protvec.py`. 
-- The Protvec model trained on _Bacillus_ carbohydrate metabolism seqeuences was compared with BLOSUM62 matrix. This analysis is shown in notebooks, `BLOSUM_comparison.ipynb`
-- Alternatively trained Protvec models can be downloaded: 
+- The Protvec model trained on _Bacillus_ carbohydrate metabolism seqeuences was compared with BLOSUM62 matrix. This analysis is shown in the notebook, `BLOSUM_comparison.ipynb`
+- Alternatively, pre-trained Protvec models can be downloaded: 
   - Protvec model trained with [_Bacillus_ carbohydrate metabolism sequences](https://doi.org/10.25451/flinders.19770379)  
   - Protvec model trained with [unannotated _Bacillus_ sequences](https://doi.org/10.25451/flinders.19770742)  
 
@@ -43,7 +45,7 @@ gunzip data/*
 ## Unknown Protein Sequences 
 
 - We trained a Protvec model with _Bacillus_ sequences with unknown function to embed and cluster _Bacillus_ sequences with unknown function. Clusters were formed using k-means and visualised using _t_-SNE `cluster_unknowns.ipynb`
-
+- The sequence similarity of the 100 sequences closest to the centroid for each cluster is compared in the notebook `unknown_cluster_sequence_similarity.ipynb` 
 
 ## References 
 
