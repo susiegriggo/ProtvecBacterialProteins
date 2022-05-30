@@ -104,9 +104,9 @@ k = 3 #kmer length
 dim = 100 #number of dimensions 
 min_count = 1
 print('reading in files')
-c_fname ="../data/bacillus_carbohydratemetabolism_trainingset.fa"  #fasta file of sequences used to train the model
-dict_fname ='bacillus_carbohydratemetabolism_3mervectors.pkl'  #3mer dictionary name 
-kmer_corpus ="bacillus_carbohydratemetabolism_corps.txt" #output kmer corpus 
+c_fname ="../Annotating_Bacterial_Function_Space_DATA/bacillus_carbohydratemetabolism_trainingset.fa"  #fasta file of sequences used to train the model
+dict_fname ='../Annotating_Bacterial_Function_Space_DATA/bacillus_carbohydratemetabolism_3mervectors.pkl'  #3mer dictionary name 
+kmer_corpus ="../Annotating_Bacterial_Function_Space_DATA/bacillus_carbohydratemetabolism_corps.txt" #output kmer corpus 
 print('files read!') 
 
 pv = ProtVec(k, dim, min_count, corpus_fname=c_fname, 

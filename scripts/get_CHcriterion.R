@@ -100,9 +100,8 @@ CHCriterion <- function( data, kmax, clustermethod, metric, ...  )
     
 }
 
-
 #read in bacillus data embedded with bacillus model
-bacil_embedding <- read.delim(file = 'bacillus_carbohydratemetabolism_embedded.tsv', sep = '\t')
+bacil_embedding <- read.delim(file = '../Annotating_Bacterial_Function_Space_DATA/bacillus_carbohydratemetabolism_embedded.tsv', sep = '\t')
 #set the sequence md5s as the index
 rownames(bacil_embedding) <- bacil_embedding$X
 bacil_embedding$X <- NULL
@@ -161,11 +160,9 @@ colnames(wss_data) <- k_labels
 rownames(wss_data) <- b_labels
 
 #save output 
-f <- file('calinski_bacil.csv', "wb")
+f <- file('../Annotating_Bacterial_Function_Space_DATA/calinski_bacil.csv', "wb")
 write.csv(ch_data, file=f, eol="\n")
 close(f)
-f <- file('wss_bacil.csv', "wb")
+f <- file('../Annotating_Bacterial_Function_Space_DATA/wss_bacil.csv', "wb")
 write.csv(wss_data, file=f, eol="\n")
 close(f)
-
-
