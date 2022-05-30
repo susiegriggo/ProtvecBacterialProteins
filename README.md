@@ -8,7 +8,7 @@ All training sequences, embedding sequences, and annotations can be downloaded [
 
 ## Usage 
 
-- Clone the repository. Add sequences and annotations to the data repository and unzip. 
+Clone this repository. Add sequences and annotations to the data directory and unzip. 
 ```
 git clone https://github.com/susiegriggo/ProtvecBacterialProteins.git
 cd data 
