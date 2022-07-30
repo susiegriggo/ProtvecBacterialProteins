@@ -21,14 +21,14 @@ mv Annotating_Bacterial_Function_Space/* ./
 
 ## Protvec Models 
 - Training Protvec models requires the [gensim](https://pypi.org/project/gensim/) module 
-- Protvec models are trained (using code adapted from [biovec](https://github.com/kyu999/biovec)) with the Protvec algorithm [1]. A vector size of 100 and a context size of 25 is used. We provide the training script `train_protvec.py`. 
+- Protvec models are trained (using code adapted from [biovec](https://github.com/kyu999/biovec)) with the Protvec algorithm [1]. A vector size of 100 and a context size of 25 is used. We provide the training script `train_protvec.py`. This script can be modified for different training data sets. 
 - The Protvec model trained on _Bacillus_ carbohydrate metabolism seqeuences was compared with BLOSUM62 matrix. This analysis is shown in the notebook, `BLOSUM_comparison.ipynb`
 - Alternatively, pre-trained Protvec models can be downloaded: 
   - Protvec model trained with [_Bacillus_ carbohydrate metabolism sequences](https://doi.org/10.25451/flinders.19770379)  
   - Protvec model trained with [unannotated _Bacillus_ sequences](https://doi.org/10.25451/flinders.19770742)  
 
 ### Protvec Sequence Embedding 
-- Sequences are embedded using the provided `embed_seqs.py` script.
+- Sequences are embedded using the provided `embed_seqs.py` script. This script can be modified for different training data sets and Protvec models. 
 - In this study sequences were embedded using the _Bacillus_ carbohydrate metabolism Protvec model as a [Protvec model trained with 324,018 sequences from the Swiss-Prot database](http://dx.doi.org/10.7910/DVN/JMFHTN) [1]. 
 
 ### K-mer frequency Embedding 
@@ -38,7 +38,7 @@ mv Annotating_Bacterial_Function_Space/* ./
 - Sequence embeddings are visualised using PCA in the notebook `vis_embeddings.ipynb`. 
 
 ## Cluster Prediction 
-- The number of clusters present within the embeddings is estimated using the Calinski-Harabasz index. The procedure for identifying clusters is included in the R script `get_CHcriterion.R`. 
+- The number of clusters present within the embeddings is estimated using the Calinski-Harabasz index. The procedure for identifying clusters is included in the R script `get_CHcriterion.R`. This script can be modified for different sets of embedded sequences. 
 - Calinski Harabasz index for different embedding techniques is compared in the notebook `num_clusters.ipynb`  
 
 ### Comapring Protvec Clustering with Subsystems 

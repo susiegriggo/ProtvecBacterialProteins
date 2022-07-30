@@ -89,7 +89,7 @@ def embedkmers_seqs(seqs, embedding):
     return embed_kmerfreq 
     
 #import the embedding sequences 
-embed_seqs_dict = SeqIO.index("bacillus_carbohydratemetabolism_embeddingset.fa", 'fasta')
+embed_seqs_dict = SeqIO.index("../Annotating_Bacterial_Function_Space_DATA/bacillus_carbohydratemetabolism_embeddingset.fa", 'fasta')
 embed_seqs_keys = list(embed_seqs_dict.keys()) #gives md5 hashes of the sequences 
 embed_seqs = [str(embed_seqs_dict.get(key).seq) for key in embed_seqs_keys]
 
@@ -124,4 +124,4 @@ embed_kmerfreq = embedkmers_seqs(embed_seqs_murphy10, kmerfreq_df)
 #save the embedding 
 embed_kmerfreqDf = pd.DataFrame(embed_kmerfreq, index = embed_seqs_keys)
 embed_kmerfreqDf.columns = kmers
-embed_kmerfreqDf.to_csv('bacillus_carbohydratemetabolism_kmer_frequency.csv')
+embed_kmerfreqDf.to_csv('../Annotating_Bacterial_Function_Space_DATA/bacillus_carbohydratemetabolism_kmer_frequency.csv')

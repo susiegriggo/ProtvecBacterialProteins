@@ -127,11 +127,11 @@ def embed_sequences(sequences,vec_dict, d):
 	return standard_embedding, embedded_seqs_keys, bad_seqs
 
 #import the pickled vector dictionary 
-with open('bacillus_carbohydratemetabolism_3mervectors.pkl', 'rb') as f: 
+with open('../Annotating_Bacterial_Function_Space_DATA/bacillus_carbohydratemetabolism_3mervectors.pkl', 'rb') as f: 
 	vec_dict = pickle.load(f) 
 
 #load in real sequences to embed (see what the speed is like when I run it locally)
-seqs = SeqIO.index("../data/bacillus_carbohydratemetabolism_embeddingset.fa", 'fasta')
+seqs = SeqIO.index("../Annotating_Bacterial_Function_Space_DATA/bacillus_carbohydratemetabolism_embeddingset.fa", 'fasta')
 
 #embed the sequences  
 print('EMBEDDING SEQUENCES')
@@ -144,8 +144,8 @@ embedding_df.index = seqs_keys
 
 #save the embedding and missing 3mers so we can evaluate them locally 
 print('Saving the embedding') 
-embedding_df.to_csv('bacillus_carbohydratemetabolism_embedded.tsv', sep = '\t')
-(pd.DataFrame(missing)).to_csv('../embedded_sequences/bacillus_carbohydratemetabolism_notembedded.tsv', sep = '\t')
+embedding_df.to_csv('../Annotating_Bacterial_Function_Space_DATA/bacillus_carbohydratemetabolism_embedded.tsv', sep = '\t')
+(pd.DataFrame(missing)).to_csv('../Annotating_Bacterial_Function_Space_DATA/bacillus_carbohydratemetabolism_notembedded.tsv', sep = '\t')
 print('Embedding saved!') 
 
 
