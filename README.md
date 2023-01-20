@@ -1,5 +1,7 @@
 # Embedding Bacterial Proteins with Protvec 
 
+**NEW:** This work has been published in BMC Bioinformatics. You can see the publication [here](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-022-04930-5). 
+
 Here we demonstrate the use of Protvec sequence embeddings for evaluating bacterial protein annotations. 
 
 This repository contains the code to train and embed sequences using Protvec models with _Bacillus_ carbohydrate metabolism sequences and unannotated _Bacillus_ sequences. We also supply code to analyse the resulting models and embeddings.  
@@ -49,6 +51,12 @@ mv Annotating_Bacterial_Function_Space/* ./
 
 - We trained a Protvec model with _Bacillus_ sequences with unknown function to embed and cluster _Bacillus_ sequences with unknown function. Clusters were formed using k-means and visualised using _t_-SNE `cluster_unknowns.ipynb`
 - The sequence similarity of the 100 sequences closest to the centroid for each cluster is compared in the notebook `unknown_cluster_sequence_similarity.ipynb` 
+
+## Citation 
+
+- If you use this work please cite it! 
+
+Grigson, S.R., McKerral, J.C., Mitchell, J.G. and Edwards, R.A., 2022. Organizing the bacterial annotation space with amino acid sequence embeddings. BMC bioinformatics, 23(1), pp.1-14.
 
 ## References 
 
